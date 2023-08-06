@@ -10,9 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllOrigins", builder =>
+    options.AddDefaultPolicy(builder =>
     {
-        builder.AllowAnyOrigin()
+        builder.WithOrigins("http://localhost:3000")
                .AllowAnyHeader()
                .AllowAnyMethod();
     });
@@ -71,7 +71,7 @@ else if (app.Environment.IsProduction())
     });
 }
 app.UseHttpsRedirection();
-app.UseCors("AllowAllOrigins");
+app.UseCors();
 
 app.UseAuthorization();
 
