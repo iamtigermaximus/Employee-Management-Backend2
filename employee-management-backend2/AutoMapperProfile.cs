@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMapper;
+using employee_management_backend2.DTOs.jobtitle;
 using employee_management_backend2.DTOs.user;
 using employee_management_backend2.Models;
 
@@ -17,9 +18,9 @@ public class AutoMapperProfile : Profile
         //CreateMap<DepartmentReqDTO, Department>();
         //CreateMap<Department, DepartmentResDTO>();
 
-        //CreateMap<JobTitle, JobTitleReqDTO>();
-        //CreateMap<JobTitleReqDTO, JobTitle>();
-        //CreateMap<JobTitle, JobTitleResDTO>();
+        CreateMap<JobTitle, JobTitleReqDTO>();
+        CreateMap<JobTitleReqDTO, JobTitle>();
+        CreateMap<JobTitle, JobTitleResDTO>();
 
         CreateMap<User, UserReqDTO>();
         CreateMap<UserReqDTO, User>();
