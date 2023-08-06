@@ -12,7 +12,9 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:3000")
+        builder.WithOrigins(
+               "https://employee-management-frontend.netlify.app",
+               "http://localhost:3000")
                .AllowAnyHeader()
                .AllowAnyMethod();
     });
