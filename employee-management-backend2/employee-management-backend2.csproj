@@ -35,6 +35,7 @@
     <None Remove="Services\Impl\" />
     <None Remove="Data\" />
     <None Remove="DTOs\" />
+    <None Remove="DTOs\user\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -43,5 +44,6 @@
     <Folder Include="Services\Impl\" />
     <Folder Include="Data\" />
     <Folder Include="DTOs\" />
+    <Folder Include="DTOs\user\" />
   </ItemGroup>
 </Project>
