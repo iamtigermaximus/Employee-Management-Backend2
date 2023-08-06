@@ -1,5 +1,6 @@
 ﻿using System;
 using AutoMapper;
+using employee_management_backend2.DTOs.auth;
 using employee_management_backend2.DTOs.department;
 using employee_management_backend2.DTOs.employee;
 using employee_management_backend2.DTOs.jobtitle;
@@ -28,9 +29,9 @@ public class AutoMapperProfile : Profile
         CreateMap<UserReqDTO, User>();
         CreateMap<User, UserResDTO>();
 
-        //CreateMap<User, AuthReqDTO>();
-        //CreateMap<AuthReqDTO, User>();
-        //CreateMap<User, AuthResDTO>();
+        CreateMap<User, AuthReqDTO>();
+        CreateMap<AuthReqDTO, User>();
+        CreateMap<User, AuthResDTO>();
     }
 }
 
