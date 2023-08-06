@@ -57,6 +57,12 @@ builder.Services.AddAuthorization(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+app.UseHttpsRedirection();
+app.UseCors();
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseSwagger();
 if (app.Environment.IsDevelopment())
 {
@@ -70,10 +76,6 @@ else if (app.Environment.IsProduction())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "EMPLOYEE-MANAGEMENT-BACKEND API v1");
     });
 }
-app.UseHttpsRedirection();
-app.UseCors();
-
-app.UseAuthorization();
 
 app.MapControllers();
 
