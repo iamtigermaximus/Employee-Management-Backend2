@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen();
 
 // Add services to the container.
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
-//builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IJobTitleService, JobTitleService>();
 builder.Services.AddScoped<IUserService, UserService>();

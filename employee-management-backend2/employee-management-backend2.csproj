@@ -38,6 +38,7 @@
     <None Remove="DTOs\user\" />
     <None Remove="DTOs\job-title\" />
     <None Remove="DTOs\department\" />
+    <None Remove="DTOs\employee\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -49,5 +50,6 @@
     <Folder Include="DTOs\user\" />
     <Folder Include="DTOs\job-title\" />
     <Folder Include="DTOs\department\" />
+    <Folder Include="DTOs\employee\" />
   </ItemGroup>
 </Project>
